@@ -1,9 +1,9 @@
 <template>
     <div class="star">
         {{ star }}
-        <input type="number" v-model="numberValue">
+        <input type="number" v-model.number="numberValue" >
         <ol>
-            <li v-for="k in typeNumber" :key="k">
+            <li v-for="k in numberValue" :key="k">
                 {{ k }}
             </li>
         </ol>
@@ -13,11 +13,7 @@
 <script>
 export default {
     name: "TheMain",
-    computed: {
-        typeNumber() {
-            return Number(this.numberValue)
-        }
-    },
+    
     props: {
         star: Number,
     },
