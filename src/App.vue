@@ -10,6 +10,7 @@
     <TheWatchs />
     <TheShow />
     <h2>Диваны</h2>
+    <TheSearch />
     <div class="theCard">
       <li v-for="(prodoct, index) in productCard" :key="index">
         <TheCard
@@ -32,6 +33,7 @@ import TheZadani from "./components/TheZadani/TheZadani.vue";
 import TheWatchs from "./components/TheWatchs/TheWatchs.vue";
 import TheShow from "./components/TheShow/TheShow.vue";
 import TheCard from "./components/TheCard/TheCard.vue";
+import TheSearch from "./components/TheSearch/TheSearch.vue";
 
 export default {
   name: "App",
@@ -54,17 +56,17 @@ export default {
           inStock: 3,
         },
         {
-          title: `Коженный диван`,
-          imgUrl: `https://nordstyleshop.ru/wp-content/uploads/2020/02/divan-chester-343.jpg`,
-          price: 36990,
-          description: `Красная кожа дракона, бук, мех офцы`,
+          title: `Тканевый диван`,
+          imgUrl: `https://lightshop1.899themes.ru/image/cache/catalog/demo-lightshop/products/sofas/product-black-and-white-fabric-3-seater-sofa-auto_width_1000.jpg`,
+          price: 26990,
+          description: `Ткань, бук, мех офцы`,
           inStock: 3,
         },
         {
-          title: `Коженный диван`,
-          imgUrl: `https://nordstyleshop.ru/wp-content/uploads/2020/02/divan-chester-343.jpg`,
-          price: 36990,
-          description: `Красная кожа дракона, бук, мех офцы`,
+          title: `Диван из шерсти`,
+          imgUrl: `https://chistimvse.ru/wp-content/uploads/2019/07/s1200-2.jpg`,
+          price: 29990,
+          description: `Шерсть барана, бук, мех офцы`,
           inStock: 3,
         },
         {
@@ -99,6 +101,7 @@ export default {
     TheWatchs,
     TheShow,
     TheCard,
+    TheSearch,
   },
 };
 </script>
