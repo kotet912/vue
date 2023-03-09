@@ -78,6 +78,12 @@ export default {
     &__buttonCart {
       border: 1px solid green;
       background-color: rgb(207, 222, 207);
+
+      cursor: pointer;
+    }
+    &__buttonCart:hover {
+      background-color: rgb(171, 185, 171);
+
     }
   }
 }

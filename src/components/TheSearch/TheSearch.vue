@@ -1,7 +1,7 @@
 <template>
   <div class="search">
-    <input type="text" placeholder="Коженный диван" @input="$emit('input',$event.target.value)"/>
-    <button>Найти</button>
+    <input type="text" placeholder="Коженный диван" v-model="searchText"/>
+    <button type="button" @click="$emit('search', searchText)">Найти</button>
   </div>
 </template>
 
@@ -11,10 +11,14 @@ export default {
         prop:`value`,
         event:`input`,
     },
-  data() {
-    return { valueSearch: `` };
-  },
+    data(){
+        return{
+            searchText:``
+        }
+    },
+
 };
 </script>
 
 <style src="./TheSearch.less" lang="less"></style>
+

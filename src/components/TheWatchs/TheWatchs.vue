@@ -12,12 +12,14 @@
     <p>Страница {{ currentPage }} из {{ pages }}</p>
     <br />
     <p>Поиск по списку</p>
-    <input type="text" @input="searchName = $event.target.value" />
+    <input type="text" v-model="searchName" />
     <p>
       Всего имен: {{ users.length }}, найдено совпадений
       {{ filtersName.length }}
     </p>
-    <li v-for="(users, index) in filtersName" :key="index">{{ users.name }}</li>
+    <li v-for="(users, index, age) in filtersName" :key="age">
+      {{ users.name }}-{{ users.age }}
+    </li>
     <br />
   </div>
 </template>
@@ -30,20 +32,18 @@ export default {
       currentPage: 1,
       searchName: ``,
       users: [
-        { name: "Алина" },
-        { name: "Маргарита" },
-        { name: "Вика" },
-        { name: "Кристина" },
-        { name: "Диана" },
-        { name: "Лора" },
+        { name: "Алина", age: 19 },
+        { name: "Маргарита", age: 17 },
+        { name: "Вика", age: 25 },
+        { name: "Кристина", age: 21 },
+        { name: "Диана", age: 24 },
+        { name: "Лора", age: 22 },
       ],
       // user: ['петр', 'олег']
     };
   },
   computed: {
     filtersName() {
-      // console.log(this.users);
-
       return this.users.filter((user) =>
         user.name.toLowerCase().includes(this.searchName.toLowerCase())
       );

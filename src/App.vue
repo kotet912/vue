@@ -2,7 +2,6 @@
   <div id="app">
     <TheHeader msg="Welcome to Your Vue.js App" />
     <TheMain :star="5" />
-
     <ol>
       <TodoItem v-for="item in groceryList" :todo="item" :key="item.id" />
     </ol>
@@ -10,10 +9,9 @@
     <TheWatchs />
     <TheShow />
     <h2>Диваны</h2>
-    <TheSearch  v-model="valueSearch"/>
-    {{ valueSearch }}
+    <TheSearch @search="searchCart" />
     <div class="theCard">
-      <li v-for="(prodoct, index) in productCard" :key="index">
+      <li v-for="(prodoct, index) in filtersCard" :key="index">
         <TheCard
           :title="prodoct.title"
           :imgUrl="prodoct.imgUrl"
@@ -93,13 +91,24 @@ export default {
           inStock: 3,
         },
       ],
-      valueSearch:``,
+      valueSearch: ``,
     };
   },
-  methods:{
-    addToCart(index){
-console.log(index);
-    }
+  methods: {
+    addToCart(index) {
+      console.log(index);
+    },
+    searchCart(searchText) {
+      console.log(searchText);
+      this.valueSearch = searchText
+    },
+  },
+  computed: {
+    filtersCard() {
+      return this.productCard.filter((card) =>
+        card.title.toLowerCase().includes(this.valueSearch.toLowerCase())
+      );
+    },
   },
   components: {
     TheHeader,
