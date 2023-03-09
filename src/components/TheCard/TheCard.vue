@@ -9,7 +9,9 @@
         </span>
         <span class="description">Состав: {{ description }}</span>
         <span class="inStock"> На складе {{ inStock }} шт.</span>
-        <button>Добавить в корзину</button>
+        <button class="box-card__description__buttonCart" type="button" @click="addToCart">
+          Добавить в корзину
+        </button>
       </div>
     </div>
   </div>
@@ -41,6 +43,11 @@ export default {
       default: 0,
     },
   },
+  methods:{
+    addToCart(){
+        this.$emit('addToCart')
+    }
+  }
 };
 </script>
 
@@ -68,6 +75,10 @@ export default {
     justify-content: flex-end;
     flex-direction: column;
     margin-top: auto;
+    &__buttonCart {
+      border: 1px solid green;
+      background-color: rgb(207, 222, 207);
+    }
   }
 }
 </style>

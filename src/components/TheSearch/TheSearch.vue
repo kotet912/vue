@@ -1,15 +1,18 @@
 <template>
   <div class="search">
-    <input type="text" v-model="valueSearch" placeholder="Коженный диван" />
+    <input type="text" placeholder="Коженный диван" @input="$emit('input',$event.target.value)"/>
     <button>Найти</button>
   </div>
 </template>
 
 <script>
 export default {
+    model:{
+        prop:`value`,
+        event:`input`,
+    },
   data() {
     return { valueSearch: `` };
-    //передать valueSearch в рендринг картинок
   },
 };
 </script>

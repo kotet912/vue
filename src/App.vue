@@ -10,7 +10,8 @@
     <TheWatchs />
     <TheShow />
     <h2>Диваны</h2>
-    <TheSearch />
+    <TheSearch  v-model="valueSearch"/>
+    {{ valueSearch }}
     <div class="theCard">
       <li v-for="(prodoct, index) in productCard" :key="index">
         <TheCard
@@ -19,6 +20,7 @@
           :price="prodoct.price"
           :description="prodoct.description"
           :inStock="prodoct.inStock"
+          @addToCart="addToCart(index)"
         />
       </li>
     </div>
@@ -91,7 +93,13 @@ export default {
           inStock: 3,
         },
       ],
+      valueSearch:``,
     };
+  },
+  methods:{
+    addToCart(index){
+console.log(index);
+    }
   },
   components: {
     TheHeader,
