@@ -22,6 +22,8 @@
         />
       </li>
     </div>
+    <h2>Формы</h2>
+    <TheForm />
   </div>
 </template>
 
@@ -34,6 +36,7 @@ import TheWatchs from "./components/TheWatchs/TheWatchs.vue";
 import TheShow from "./components/TheShow/TheShow.vue";
 import TheCard from "./components/TheCard/TheCard.vue";
 import TheSearch from "./components/TheSearch/TheSearch.vue";
+import TheForm from "./components/TheForm/TheForm.vue";
 
 export default {
   name: "App",
@@ -100,7 +103,7 @@ export default {
     },
     searchCart(searchText) {
       console.log(searchText);
-      this.valueSearch = searchText
+      this.valueSearch = searchText;
     },
   },
   computed: {
@@ -119,6 +122,7 @@ export default {
     TheShow,
     TheCard,
     TheSearch,
+    TheForm,
   },
 };
 </script>
