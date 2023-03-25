@@ -1,6 +1,5 @@
 <template>
-    <div id="app" >
-
+    <div id="app">
         <TheHeader msg="Welcome to Your Vue.js App" />
 
         <TheMain :star="5" />
@@ -27,7 +26,7 @@
         </div>
         <h2>Формы</h2>
         <TheForm />
-
+        <TheMenu />
     </div>
 </template>
 
@@ -41,6 +40,7 @@ import TheShow from './components/TheShow/TheShow.vue';
 import TheCard from './components/TheCard/TheCard.vue';
 import TheSearch from './components/TheSearch/TheSearch.vue';
 import TheForm from './components/TheForm/TheForm.vue';
+import TheMenu from './components/TheMenu/TheMenu.vue';
 
 export default {
     name: 'App',
@@ -127,6 +127,7 @@ export default {
         TheCard,
         TheSearch,
         TheForm,
+        TheMenu,
     },
 };
 </script>
