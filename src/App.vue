@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <TheMenu :menuItems="menuItems" />
+
         <TheHeader msg="Welcome to Your Vue.js App" />
 
         <TheMain :star="5" />
@@ -26,7 +28,6 @@
         </div>
         <h2>Формы</h2>
         <TheForm />
-        <TheMenu />
     </div>
 </template>
 
@@ -99,6 +100,12 @@ export default {
                 },
             ],
             valueSearch: ``,
+            menuItems: [
+                { title: 'Главная', link: '#' },
+                { title: 'О нас', link: '#' },
+                { title: 'Услуги', link: '#' },
+                { title: 'Контакты', link: '#' },
+            ],
         };
     },
     methods: {

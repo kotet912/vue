@@ -39,7 +39,7 @@ export default {
     data() {
         return {
             imgVisibel: true,
-            buttonText: `Показать`,
+            buttonText: `Спраятать`,
             imgFiltrs: {
                 sepia: false,
                 border: false,
@@ -56,7 +56,6 @@ export default {
                 rotate:0,
                 minRotate:0,
                 maxRotate:360,
-
             }
         }
     },
@@ -68,16 +67,16 @@ export default {
                 transform: `rotate(${this.imgSizes.rotate}deg)`,
             }
         },
-
     },
     methods: {
         switchButtun() {
             if(this.imgVisibel){
                 this.imgVisibel = false,
-                this.buttonText = `Спраятать`
+                this.buttonText = `Показать`
+
             }else{
                 this.imgVisibel = true,
-                this.buttonText = `Показать`
+                this.buttonText = `Спраятать`
             }
         }
     }
@@ -87,16 +86,12 @@ export default {
 <style lang="less">
 img {
     width: 20%;
-
-
     &.sepia {
         filter: sepia(100%);
     }
-
     &.border {
         border: 2px dashed red;
     }
-
     &.small {
         width: 10%;
     }
