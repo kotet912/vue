@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../App.vue'),
+    component: () => import('../views/Home.vue'),
   },
   {
     path: '/find-match',

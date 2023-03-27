@@ -1,17 +1,13 @@
 <template>
     <main>
-        <TheMenu :menuItems="menuItems" />
+        <h1>Это страница маршутизации</h1>
     </main>
 </template>
 
 <script>
-import TheMenu from '../components/TheMenu/TheMenu.vue';
 
 export default {
     name: 'FindMatch',
-    components: {
-        TheMenu,
-    },
     data() {
         return {};
     },

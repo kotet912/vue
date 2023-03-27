@@ -3,12 +3,11 @@
         <nav class="menu__nav">
             <ul class="menu__list">
                 <li v-for="item in menuItems" :key="item.id" class="menu__item">
-                    <!-- <router-link :to="item.link" class="menu__link">{{ item.title }}</router-link> -->
+                    <router-link :to="item.link" class="menu__link">{{ item.title }}</router-link>
                 </li>
             </ul>
-            <router-link to="/">Главная</router-link>
-            <router-link to="/find-match">Найди соответствие</router-link>
         </nav>
+        
     </div>
 </template>
 
@@ -29,35 +28,33 @@ export default {
 </script>
 
 <style lang="less">
-.menu__nav {
-    background-color: #f2f2f2;
-    text-align: center;
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu__item {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.menu__link {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    transition: all 0.2s ease-in-out;
-    border-bottom: 3px solid transparent;
-}
-
-.menu__link:hover {
-    border-color: #333;
+.menu {
+    &__nav {
+        background-color: #f2f2f2;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+    }
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    &__link {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        transition: all 0.2s ease-in-out;
+        border-bottom: 3px solid transparent;
+    }
+    &__link:hover {
+        border-color: #333;
+    }
 }
 </style>
