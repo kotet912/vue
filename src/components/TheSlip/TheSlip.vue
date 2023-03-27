@@ -1,7 +1,14 @@
 <template>
-    <div class="TheSlip" :class="{ 'is-flipped': isFlipped }" @click="flip">
-        <div class="TheSlip__content" :class="{ 'is-hidden': isFlipped }">
-            {{ randomNumber }}
+    <div
+        class="TheSlip"
+        :class="{ 'is-selected': isSelected, 'is-matched': isMatched, 'is-flipped': isFlipped }"
+        @click="handleClick"
+    >
+        <div class="TheSlip__content TheSlip__content--front">
+            <div class="TheSlip__number">{{ number }}</div>
+        </div>
+        <div class="TheSlip__content TheSlip__content--back">
+            <div class="TheSlip__icon">✅</div>
         </div>
     </div>
 </template>
@@ -9,20 +16,31 @@
 <script>
 export default {
     name: 'TheSlip',
-    data() {
-        return {
-            isFlipped: false,
-            randomNumber: Math.floor(Math.random() * 10) + 1,
-        };
-    },
+    props: {
+    number: {
+      type: Number,
+      required: true
+    }
+  },
+  data() {
+    return {
+      isSelected: false,
+      isMatched: false,
+      isFlipped: false
+    };
+  },
+  methods: {
+    handleClick() {
+      if (!this.isMatched) {
+        this.isSelected = !this.isSelected;
+        this.isFlipped = !this.isFlipped;
 
-    methods: {
-        flip() {
-            this.isFlipped = !this.isFlipped;
-        },
-    },
-    mounted() {},
+        this.$emit('selected');
+      }
+    }
+  }
 };
+
 </script>
 
 <style lang="less">
