@@ -2,21 +2,28 @@
     <div class="menu">
         <nav class="menu__nav">
             <ul class="menu__list">
-                <li v-for="item in menuItems" :key="item.Array" class="menu__item">
-                    <a :href="item.link" class="menu__link">{{ item.title }}</a>
+                <li v-for="item in menuItems" :key="item.id" class="menu__item">
+                    <!-- <router-link :to="item.link" class="menu__link">{{ item.title }}</router-link> -->
                 </li>
             </ul>
+            <router-link to="/">Главная</router-link>
+            <router-link to="/find-match">Найди соответствие</router-link>
         </nav>
     </div>
 </template>
 
 <script>
 export default {
-    props: {
-        menuItems: {
-            type: Array,
-            required: true,
-        },
+    data() {
+        return {
+            menuItems: [
+                { id: 1, title: 'Главная', link: '/' },
+                { id: 2, title: 'Найди соответствие', link: '/find-match' },
+                { id: 3, title: 'О нас', link: '#' },
+                { id: 4, title: 'Услуги', link: '#' },
+                { id: 5, title: 'Контакты', link: '#' },
+            ],
+        };
     },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <TheMenu :menuItems="menuItems" />
+        <TheMenu />
 
         <TheHeader msg="Welcome to Your Vue.js App" />
 
@@ -100,12 +100,7 @@ export default {
                 },
             ],
             valueSearch: ``,
-            menuItems: [
-                { title: 'Главная', link: '#' },
-                { title: 'О нас', link: '#' },
-                { title: 'Услуги', link: '#' },
-                { title: 'Контакты', link: '#' },
-            ],
+           
         };
     },
     methods: {
