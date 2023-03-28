@@ -26,14 +26,19 @@ const routes = [
     component: () => import('../views/TheServices.vue'),
   },
   {
-    path: '/Contacts',
+    path: '/contacts',
     name: 'Contacts',
     component: () => import('../views/TheContacts.vue'),
   },
   {
-    path: '/TicTacToe',
+    path: '/ticTacToe',
     name: 'TicTacToe',
     component: () => import('../views/TicTacToe.vue'),
+  },
+  {
+    path: '/chart',
+    name: 'ChartPage',
+    component: () => import('../views/ChartPage.vue'),
   },
 ];
 

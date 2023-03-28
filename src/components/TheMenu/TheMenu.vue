@@ -20,8 +20,9 @@ export default {
                 { id: 2, title: 'Найди соответствие', link: '/find-match' },
                 { id: 3, title: 'О нас', link: '/about' },
                 { id: 4, title: 'Услуги', link: '/services' },
-                { id: 5, title: 'Контакты', link: '/Contacts' },
-                { id: 6, title: 'Крестики нолики', link: '/TicTacToe' },
+                { id: 5, title: 'Контакты', link: '/contacts' },
+                { id: 6, title: 'Крестики нолики', link: '/ticTacToe' },
+                { id: 7, title: 'Графики', link: '/chart' },
             ],
         };
     },
