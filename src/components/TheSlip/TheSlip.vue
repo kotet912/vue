@@ -7,9 +7,7 @@
         <div class="TheSlip__content TheSlip__content--front">
             <div class="TheSlip__number">{{ number }}</div>
         </div>
-        <div class="TheSlip__content TheSlip__content--back">
-            <div class="TheSlip__icon">✅</div>
-        </div>
+        
     </div>
 </template>
 

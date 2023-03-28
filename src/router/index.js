@@ -15,6 +15,21 @@ const routes = [
     name: 'findMatch',
     component: () => import('../views/FindMatch.vue'),
   },
+  {
+    path: '/about',
+    name: 'TheAbout',
+    component: () => import('../views/TheAbout.vue'),
+  },
+  {
+    path: '/services',
+    name: 'TheServices',
+    component: () => import('../views/TheServices.vue'),
+  },
+  {
+    path: '/Contacts',
+    name: 'Contacts',
+    component: () => import('../views/TheContacts.vue'),
+  },
 ];
 
 const router = new VueRouter({

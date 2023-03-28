@@ -53,7 +53,7 @@ export default {
 <style lang="less">
 .box-card {
     width: 320px;
-    height: 500px;
+    height: 520px;
     margin-bottom: 20px;
     padding: 10px;
     display: flex;

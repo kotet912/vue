@@ -18,9 +18,9 @@ export default {
             menuItems: [
                 { id: 1, title: 'Главная', link: '/' },
                 { id: 2, title: 'Найди соответствие', link: '/find-match' },
-                { id: 3, title: 'О нас', link: '#' },
-                { id: 4, title: 'Услуги', link: '#' },
-                { id: 5, title: 'Контакты', link: '#' },
+                { id: 3, title: 'О нас', link: '/about' },
+                { id: 4, title: 'Услуги', link: '/services' },
+                { id: 5, title: 'Контакты', link: '/Contacts' },
             ],
         };
     },
