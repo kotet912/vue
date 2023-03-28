@@ -24,6 +24,26 @@
         </div>
         <h2>Формы</h2>
         <TheForm />
+        <div class="miniCard">
+            <TheMiniCard
+                :title="`Услуга выбора`"
+                :description="`В услге выбора есть возможность выбора конкретного случая`"
+                :originalPrice="2500"
+                :discountedPrice="900"
+            />
+            <TheMiniCard
+                :title="`Услуга выбора`"
+                :description="`В услге выбора есть возможность выбора конкретного случая`"
+                :originalPrice="2500"
+                :discountedPrice="900"
+            />
+            <TheMiniCard
+                :title="`Услуга выбора`"
+                :description="`В услге выбора есть возможность выбора конкретного случая`"
+                :originalPrice="2500"
+                :discountedPrice="900"
+            />
+        </div>
     </main>
 </template>
 
@@ -37,6 +57,7 @@ import TheShow from '../components/TheShow/TheShow.vue';
 import TheCard from '../components/TheCard/TheCard.vue';
 import TheSearch from '../components/TheSearch/TheSearch.vue';
 import TheForm from '../components/TheForm/TheForm.vue';
+import TheMiniCard from '../components/TheMiniCard/TheMiniCard.vue';
 
 export default {
     name: 'App',
@@ -123,8 +144,13 @@ export default {
         TheCard,
         TheSearch,
         TheForm,
+        TheMiniCard,
     },
 };
 </script>
 
-<style  lang="less"></style>
+<style lang="less">
+.miniCard{
+    display: flex;
+}
+</style>
