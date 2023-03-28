@@ -30,6 +30,11 @@ const routes = [
     name: 'Contacts',
     component: () => import('../views/TheContacts.vue'),
   },
+  {
+    path: '/TicTacToe',
+    name: 'TicTacToe',
+    component: () => import('../views/TicTacToe.vue'),
+  },
 ];
 
 const router = new VueRouter({

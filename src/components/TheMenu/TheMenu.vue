@@ -21,6 +21,7 @@ export default {
                 { id: 3, title: 'О нас', link: '/about' },
                 { id: 4, title: 'Услуги', link: '/services' },
                 { id: 5, title: 'Контакты', link: '/Contacts' },
+                { id: 6, title: 'Крестики нолики', link: '/TicTacToe' },
             ],
         };
     },
